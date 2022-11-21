@@ -3,7 +3,13 @@ server:
 spring:
   application:
     name: config-main
-  datasource:
-    url: mongodb://localhost:27017/coderhouse-ecommerce?createDatabaseIfNotExist=true
-    username: root
-    password: 60679194
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: coderhouse-ecommerce
+  app-auth:
+    app:
+      jwt:
+        secret: keepSecretSafeOk98herfg9werhfn9p034h90werbgnw9p84erbtn9p3w48h9tj0rsfdgrtbdfghretrtyerdfgdfgertertertsdf
+        expiration: 10000
